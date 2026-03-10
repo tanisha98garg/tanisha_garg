@@ -66,26 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
   revealElements.forEach(el => revealObserver.observe(el));
 
   // ═════════════════════════════════════════════════
-  // HERO PARTICLES
-  // ═════════════════════════════════════════════════
-  const particleContainer = document.getElementById('hero-particles');
-  if (particleContainer) {
-    for (let i = 0; i < 25; i++) {
-      const p = document.createElement('div');
-      p.classList.add('particle');
-      const size = Math.random() * 4 + 2;
-      p.style.width  = size + 'px';
-      p.style.height = size + 'px';
-      p.style.left   = Math.random() * 100 + '%';
-      p.style.top    = Math.random() * 100 + '%';
-      p.style.animationDuration = (Math.random() * 8 + 6) + 's';
-      p.style.animationDelay    = (Math.random() * 5) + 's';
-      particleContainer.appendChild(p);
-    }
-  }
-
-  // ═════════════════════════════════════════════════
-  // LIGHTBOX for gallery images
+  // LIGHTBOX for gallery / showcase images
   // ═════════════════════════════════════════════════
   const lightbox = document.createElement('div');
   lightbox.className = 'lightbox';
@@ -96,7 +77,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const lbClose = lightbox.querySelector('.lightbox-close');
 
   function bindGalleryLightbox() {
-    document.querySelectorAll('.gallery-item').forEach(item => {
+    // Bind to gallery-item (legacy) and showcase-item-image (new)
+    document.querySelectorAll('.gallery-item, .showcase-item-image').forEach(item => {
       item.addEventListener('click', () => {
         const img = item.querySelector('img');
         lbImg.src = img.src;
@@ -139,8 +121,9 @@ document.addEventListener('DOMContentLoaded', () => {
               <h3 class="card-title">${project.title}</h3>
               <p class="card-excerpt">${project.shortDescription}</p>
               <a href="project.html?id=${project.id}" class="btn btn-outline btn-sm">
-                View Details <span class="btn-arrow">→</span>
+                View Case Study <span class="btn-arrow">→</span>
               </a>
+              <span class="card-meta">${project.tag} • 2024</span>
             </div>
           `;
 
@@ -160,6 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ═════════════════════════════════════════════════
   // PROJECT DETAIL PAGE (project.html)
+  // — Vertical showcase: heading + writeup + image
   // ═════════════════════════════════════════════════
   const detailHeader  = document.getElementById('project-detail-header');
   const detailGallery = document.getElementById('project-detail-gallery');
@@ -189,15 +173,36 @@ document.addEventListener('DOMContentLoaded', () => {
           <p class="project-detail-desc">${data.description}</p>
         `;
 
-        // Render gallery
-        data.images.forEach(img => {
-          const item = document.createElement('div');
-          item.className = 'gallery-item';
-          item.innerHTML = `<img src="projects/${projectId}/${img.src}" alt="${img.alt}" loading="lazy" />`;
-          detailGallery.appendChild(item);
-        });
+        // Check if images have heading/writeup fields → use showcase layout
+        const hasShowcaseData = data.images.some(img => img.heading || img.writeup);
 
-        // Bind lightbox to new gallery items
+        if (hasShowcaseData) {
+          // Vertical showcase: heading + writeup + image for each
+          detailGallery.className = 'project-showcase';
+          data.images.forEach(img => {
+            const item = document.createElement('div');
+            item.className = 'showcase-item';
+            item.innerHTML = `
+              ${img.heading ? `<h2 class="showcase-item-heading">${img.heading}</h2>` : ''}
+              ${img.writeup ? `<p class="showcase-item-writeup">${img.writeup}</p>` : ''}
+              <div class="showcase-item-image">
+                <img src="projects/${projectId}/${img.src}" alt="${img.alt}" loading="lazy" />
+              </div>
+            `;
+            detailGallery.appendChild(item);
+          });
+        } else {
+          // Fallback: standard gallery grid
+          detailGallery.className = 'project-gallery';
+          data.images.forEach(img => {
+            const item = document.createElement('div');
+            item.className = 'gallery-item';
+            item.innerHTML = `<img src="projects/${projectId}/${img.src}" alt="${img.alt}" loading="lazy" />`;
+            detailGallery.appendChild(item);
+          });
+        }
+
+        // Bind lightbox to new gallery/showcase items
         bindGalleryLightbox();
       })
       .catch(() => {

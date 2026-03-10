@@ -5,23 +5,33 @@
   "images": [
     {
       "src": "vedaglow-aloe-cream-ad.png",
-      "alt": "VedaGlow Aloe Face Cream promotional ad"
+      "alt": "VedaGlow Aloe Face Cream promotional ad",
+      "heading": "Promotional Ad — Aloe Face Cream",
+      "writeup": "A promotional creative highlighting VedaGlow's hero product — the Aloe Face Cream. The design combines the brand's botanical aesthetic with a clean, modern layout to showcase product benefits and create visual impact for social media marketing."
     },
     {
       "src": "vedaglow-anti-aging-serum.jpg",
-      "alt": "VedaGlow Radiance Anti-Aging Serum ad"
+      "alt": "VedaGlow Radiance Anti-Aging Serum ad",
+      "heading": "Product Ad — Anti-Aging Serum",
+      "writeup": "A visually rich ad for the Radiance Anti-Aging Serum, blending warm earth tones with elegant typography. The design emphasizes the product's natural, Ayurvedic ingredients and positions it as a premium skincare solution."
     },
     {
       "src": "vedaglow-kumkumadi-packaging.png",
-      "alt": "VedaGlow Kumkumadi Glow Serum product packaging"
+      "alt": "VedaGlow Kumkumadi Glow Serum product packaging",
+      "heading": "Packaging Design — Kumkumadi Glow Serum",
+      "writeup": "Complete packaging design for the Kumkumadi Glow Serum. The packaging uses VedaGlow's signature earthy palette with botanical motifs, creating a cohesive brand experience from shelf to skincare routine."
     },
     {
       "src": "vedaglow-kumkumadi-ad.jpg",
-      "alt": "VedaGlow Kumkumadi Glow Serum social media ad"
+      "alt": "VedaGlow Kumkumadi Glow Serum social media ad",
+      "heading": "Social Media Creative — Kumkumadi Serum",
+      "writeup": "A social media promotional creative designed for VedaGlow's Kumkumadi Glow Serum launch campaign. The layout balances product photography with descriptive text, optimized for engagement on Instagram and Facebook."
     },
     {
       "src": "vedaglow-aloe-cream-shop.jpg",
-      "alt": "VedaGlow Aloe Face Cream shop now creative"
+      "alt": "VedaGlow Aloe Face Cream shop now creative",
+      "heading": "E-Commerce Creative — Shop Now",
+      "writeup": "An e-commerce focused creative for the Aloe Face Cream, designed to drive conversions with a clear call-to-action and appealing product presentation. The warm, inviting aesthetic aligns with VedaGlow's brand identity."
     }
   ]
 }
