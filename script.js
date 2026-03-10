@@ -5,11 +5,11 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   // ── Elements ──
-  const navbar    = document.getElementById('navbar');
+  const navbar = document.getElementById('navbar');
   const navToggle = document.getElementById('nav-toggle');
-  const navLinks  = document.getElementById('nav-links');
-  const links     = document.querySelectorAll('.nav-link');
-  const sections  = document.querySelectorAll('section');
+  const navLinks = document.getElementById('nav-links');
+  const links = document.querySelectorAll('.nav-link');
+  const sections = document.querySelectorAll('section');
 
   // ═════════════════════════════════════════════════
   // NAVBAR: Shrink on scroll & active link highlight
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
   lightbox.innerHTML = '<button class="lightbox-close" aria-label="Close">&times;</button><img src="" alt="" />';
   document.body.appendChild(lightbox);
 
-  const lbImg   = lightbox.querySelector('img');
+  const lbImg = lightbox.querySelector('img');
   const lbClose = lightbox.querySelector('.lightbox-close');
 
   function bindGalleryLightbox() {
@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // PROJECT DETAIL PAGE (project.html)
   // — Vertical showcase: heading + writeup + image
   // ═════════════════════════════════════════════════
-  const detailHeader  = document.getElementById('project-detail-header');
+  const detailHeader = document.getElementById('project-detail-header');
   const detailGallery = document.getElementById('project-detail-gallery');
 
   if (detailHeader && detailGallery) {
@@ -211,40 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ═════════════════════════════════════════════════
-  // CONTACT FORM HANDLING
+  // CONTACT FORM — handled by FormSubmit.co (no JS needed)
+  // The form submits directly via POST to FormSubmit.co
   // ═════════════════════════════════════════════════
-  const form = document.getElementById('contact-form');
-  const submitBtn = document.getElementById('submit-btn');
-
-  if (form && submitBtn) {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-
-      const name    = form.querySelector('#name').value.trim();
-      const email   = form.querySelector('#email').value.trim();
-      const message = form.querySelector('#message').value.trim();
-
-      if (!name || !email || !message) {
-        alert('Please fill in all fields.');
-        return;
-      }
-
-      const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRe.test(email)) {
-        alert('Please enter a valid email address.');
-        return;
-      }
-
-      submitBtn.textContent = '✓ Message Sent!';
-      submitBtn.style.pointerEvents = 'none';
-      submitBtn.style.opacity = '0.7';
-      form.reset();
-
-      setTimeout(() => {
-        submitBtn.innerHTML = 'Send Message <span class="btn-arrow">→</span>';
-        submitBtn.style.pointerEvents = '';
-        submitBtn.style.opacity = '';
-      }, 3000);
-    });
-  }
 });

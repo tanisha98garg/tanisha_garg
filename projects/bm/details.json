@@ -1,19 +1,25 @@
 {
   "title": "BM Pharmacy",
   "tag": "Brand Identity",
-  "description": "site check cdndnndncnwqnqwjfjrohfwqrfwqjk  wjfbjwbfbqwbfjbqwj cn bfub uefbbwejfbkw  efub  ebf beefb befub ebfj",
+  "description": "Brand identity and marketing materials for <strong>BM Pharmacy</strong>, a pharmaceutical company. The designs include professional business cards, promotional banners, and branded mockups that establish a trustworthy and modern visual presence.",
   "images": [
     {
       "src": "bm-2-mockup.jpg",
-      "alt": "ad 1"
+      "alt": "BM Pharmacy mockup design 1",
+      "heading": "Brand Mockup — Stationery",
+      "writeup": "Add your description here for this design piece."
     },
     {
       "src": "bm-3-mockup.jpg",
-      "alt": "ad 2"
+      "alt": "BM Pharmacy mockup design 2",
+      "heading": "Brand Mockup — Packaging",
+      "writeup": "Add your description here for this design piece."
     },
     {
       "src": "bm-4-mockup.jpg",
-      "alt": "ad 3"
+      "alt": "BM Pharmacy mockup design 3",
+      "heading": "Brand Mockup — Promotional",
+      "writeup": "Add your description here for this design piece."
     }
   ]
 }
