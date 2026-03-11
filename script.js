@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <a href="project.html?id=${project.id}" class="btn btn-outline btn-sm">
                 View Case Study <span class="btn-arrow">→</span>
               </a>
-              <span class="card-meta">${project.tag} • 2026</span>
+              <span class="card-meta">${project.tag}</span>
             </div>
           `;
 
