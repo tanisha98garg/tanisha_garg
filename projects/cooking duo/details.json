@@ -1,25 +1,25 @@
 {
   "title": "The Cooking Duo",
-  "tag": "Brand Identity",
-  "description": " for <strong>BM Pharmacy</strong>, a pharmaceutical company. The designs include professional business cards, promotional banners, and branded mockups that establish a trustworthy and modern visual presence.",
+  "tag": "Logo Design",
+  "description": "The Cooking Duo is a modern cafe concept built around the idea of sharing great food .The logo combines elegent typography with cooking inspired element to create a classy and welcoming visual style.",
   "images": [
     {
-      "src": "bm-2-mockup.jpg",
+      "src": "Simple and Modern 3D Logo Mockup.jpg",
       "alt": "BM Pharmacy mockup design 1",
-      "heading": "Brand Mockup — Stationery",
-      "writeup": "Add your description here for this design piece."
+      "heading": "Logo design",
+      "writeup": ""
     },
     {
-      "src": "bm-3-mockup.jpg",
+      "src": "ChatGPT Image Mar 11, 2026, 07_03_44 PM.png",
       "alt": "BM Pharmacy mockup design 2",
-      "heading": "Brand Mockup — Packaging",
-      "writeup": "Add your description here for this design piece."
+      "heading": "",
+      "writeup": ""
     },
     {
-      "src": "bm-4-mockup.jpg",
+      "src": "661fc4f6-50db-403f-9eff-ff49ab699a0b.png",
       "alt": "BM Pharmacy mockup design 3",
-      "heading": "Brand Mockup — Promotional",
-      "writeup": "Add your description here for this design piece."
+      "heading": "visual representation",
+      "writeup": ""
     }
   ]
 }
