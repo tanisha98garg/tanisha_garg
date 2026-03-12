@@ -1154,7 +1154,51 @@ ul {
 }
 
 /* ═══════════════════════════════════════════════════
-   RESPONSIVE
+   RESPONSIVE — DESKTOP ENHANCEMENTS
+   (min-width: 769px so mobile stays untouched)
+   ═══════════════════════════════════════════════════ */
+@media (min-width: 769px) {
+
+  /* ── Project Detail: narrower container on desktop ── */
+  .project-detail .container {
+    max-width: 900px;
+  }
+
+  /* ── Showcase images: viewable in a single glance ── */
+  .showcase-item-image {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .showcase-item-image img {
+    max-height: 70vh;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  /* ── Gallery grid: tighter, more browsable ── */
+  .project-gallery {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 12px;
+  }
+
+  .gallery-item {
+    aspect-ratio: 1;
+    max-height: 320px;
+  }
+
+  .gallery-item img {
+    object-fit: cover;
+  }
+
+  /* ── Project cards on index: fit more per row ── */
+  .projects-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
+/* ═══════════════════════════════════════════════════
+   RESPONSIVE — MOBILE
    ═══════════════════════════════════════════════════ */
 @media (max-width: 768px) {
   .nav-toggle {
